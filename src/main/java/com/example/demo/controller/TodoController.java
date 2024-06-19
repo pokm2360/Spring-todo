@@ -43,13 +43,13 @@ public class TodoController {
 
     @PostMapping("/todo/{id}/update")
     public String updateTodo(@PathVariable("id") int id) {
-        service.updateTodoStatus(id);
+        service.updateTodo(id);
         return "redirect:/todo";
     }
 
     @PostMapping("/todo/{id}/delete")
     public String deleteTodo(@PathVariable("id") int id) {
-        service.deleteTodoById(id);
+        service.deleteTodo(id);
         return "redirect:/todo";
     }
 }
